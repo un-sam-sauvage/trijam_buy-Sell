@@ -33,7 +33,7 @@ public class BlockToPlace : MonoBehaviour
         foreach(Vector2Int pos in posToCheck){
             if(pos.x < gridManager.gridSize && pos.y < gridManager.gridSize && pos.x >= 0 && pos.y >= 0){
                 Node node = gridManager.grid[pos.x,pos.y];
-                if(node.obj != null && node.obj.tag == gameObject.tag){
+                if(node.obj != null && node.obj.tag == gameObject.tag && node.pos != gameObject.transform.position){
                     neighbours.Add(node);
                     neighbours = addNeighbourNeighbours(node.obj.GetComponent<BlockToPlace>().neighbours,neighbours);
                     node.obj.GetComponent<BlockToPlace>().neighbours.Add(gridManager.grid[_indexI,_indexJ]);
