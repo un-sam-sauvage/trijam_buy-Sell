@@ -16,6 +16,8 @@ public class HousePlacer : MonoBehaviour
     private RaycastHit _hit;
     [SerializeField]
     private Vector3 hitPoint;
+
+    [SerializeField] private LayerMask groundMask;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +45,7 @@ public class HousePlacer : MonoBehaviour
     {
         Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out _hit))
+        if (Physics.Raycast(ray, out _hit, Mathf.Infinity, groundMask))
         {
             hitPoint = new Vector3(Mathf.Floor(_hit.point.x) + 0.5f, 0.5f, Mathf.Floor(_hit.point.z) + 0.5f);
             houseToPlace.gameObject.transform.position = hitPoint;
@@ -66,6 +68,7 @@ public class HousePlacer : MonoBehaviour
                         gridManagerGrid[i, j].obj = houseToPlace.gameObject;
                         houseToPlace.transform.position = gridManagerGrid[i, j].pos;
                         houseToPlace.IsPlaced(i,j);
+                        houseToPlace.gameObject.GetComponent<BoxCollider>().enabled = true;
                         isHouseSelected = false;
                         houseToPlace = null;
                     }

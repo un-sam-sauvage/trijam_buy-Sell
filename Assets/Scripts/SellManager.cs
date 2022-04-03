@@ -4,19 +4,83 @@ using UnityEngine;
 
 public class SellManager : MonoBehaviour
 {
+    private Camera _camera;
+    private static SellManager _sellManager;
 
-    private SellManager _sellManager;
+    public static SellManager Instance => _sellManager;
+    [SerializeField] private LayerMask houseMask;
+    [SerializeField] private bool isNeighborhoodCanBeSell;
+    [SerializeField] private int numberMinNeighborForSell;
+    [SerializeField] private int moneyEarnedFromSelling;
 
-    public SellManager Instance => _sellManager;
-  
+    private BlockToPlace _currentCheckedHouse;
+    public List<GameObject> housesList = new List<GameObject>();
     void Awake()
     {
         _sellManager = this;
+        _camera = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            SelectHouses();
+        }
+    }
+
+    private void SelectHouses()
+    {
+        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
         
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, houseMask) )
+        {
+            CheckForNeighbor(hit);
+        }
+    }
+
+    private void CheckForNeighbor(RaycastHit hit)
+    {
+        if (hit.collider.gameObject.GetComponent<BlockToPlace>())
+        {
+            _currentCheckedHouse = hit.collider.gameObject.GetComponent<BlockToPlace>();
+            ClearVariables();
+            
+            housesList.Add(_currentCheckedHouse.gameObject);
+            
+            foreach (var node in _currentCheckedHouse.neighbours)
+            {
+                housesList.Add(node.obj);
+            }
+            
+            if (housesList.Count >= numberMinNeighborForSell)
+            {
+                isNeighborhoodCanBeSell = true;
+            }
+        }
+    }
+
+    private void ClearVariables()
+    {
+        housesList.Clear();
+        isNeighborhoodCanBeSell = false;
+    }
+
+
+ /// <summary>
+ /// Code for button "SELL"
+ /// </summary>
+    public void SellNeighborhood()
+    {
+        if (isNeighborhoodCanBeSell)
+        {
+            foreach (var house  in housesList)
+            {
+                Destroy(house);
+            }
+            GameManager.Instance.SetUpPlayerMoney(moneyEarnedFromSelling);
+        }
     }
 }
