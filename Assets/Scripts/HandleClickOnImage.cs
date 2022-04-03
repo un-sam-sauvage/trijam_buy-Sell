@@ -18,6 +18,7 @@ public class HandleClickOnImage : MonoBehaviour
         }
     }
     public void OnClick(WhichObjectContainsThisImage objClicked){
+        GetComponent<HousePlacer>().isHouseSelected = true;
         obj = objClicked.obj;
         for (int i = 1; i < images.Count; i++)
         {

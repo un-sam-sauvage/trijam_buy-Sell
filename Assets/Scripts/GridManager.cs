@@ -19,7 +19,7 @@ public class GridManager : MonoBehaviour
         grid = new Node [gridSize,gridSize];
         for(int i = 0 ; i < gridSize; i++){
            for(int j = 0 ; j < gridSize ; j++){
-               grid[i,j] = new Node(new Vector3(i-offset,0,j-offset));
+               grid[i,j] = new Node(new Vector3(i-offset,.5f,j-offset));
            }
         }
     }
@@ -38,7 +38,7 @@ public class GridManager : MonoBehaviour
 public class Node {
     public Vector3 pos;
     public GameObject obj;
-
+    public bool isVisited;
     public Node (Vector3 pos){
         this.pos = pos;
     }

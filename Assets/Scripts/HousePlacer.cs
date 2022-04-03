@@ -11,7 +11,7 @@ public class HousePlacer : MonoBehaviour
 
     private Camera _cam;
 
-    [SerializeField] private bool isHouseSelected;
+    public bool isHouseSelected;
     [SerializeField] private GridManager gridManager;
     private RaycastHit _hit;
     [SerializeField]
@@ -27,11 +27,18 @@ public class HousePlacer : MonoBehaviour
     {
         if (isHouseSelected)
         {
-            CheckHousePlacing();
-        }
-        PlaceHouse();
-    }
+            if(houseToPlace == null){
+                GameObject house = Instantiate(GetComponent<HandleClickOnImage>().obj, transform.position,Quaternion.identity);
+                houseToPlace = house.GetComponent<BlockToPlace>();
+            }
+            else{
+                CheckHousePlacing();
+                PlaceHouse();
+            }
 
+        }
+        
+    }
     private bool CheckHousePlacing()
     {
         Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
@@ -48,17 +55,21 @@ public class HousePlacer : MonoBehaviour
 
     private void PlaceHouse()
     {
-        if (Input.GetMouseButton(0) && CheckHousePlacing())
+        if (Input.GetMouseButtonDown(0) && CheckHousePlacing())
         {
             var gridManagerGrid = gridManager.grid;
             for (int i = 0; i < gridManager.gridSize; i++)
             {
                 for (int j = 0; j < gridManager.gridSize; j++)
                 {
-                    gridManagerGrid[i, j].pos = hitPoint;
-                    gridManagerGrid[i, j].obj = houseToPlace.gameObject;
-                    houseToPlace.transform.position = gridManagerGrid[i, j].pos;
-                    isHouseSelected = false;
+                    if( houseToPlace && gridManagerGrid[i,j].pos == houseToPlace.transform.position){
+                        gridManagerGrid[i, j].obj = houseToPlace.gameObject;
+                        houseToPlace.transform.position = gridManagerGrid[i, j].pos;
+                        houseToPlace.IsPlaced(i,j);
+                        isHouseSelected = false;
+                        houseToPlace = null;
+                    }
+                    
                 }
             }
         }
