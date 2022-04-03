@@ -23,8 +23,11 @@ public class HandleClickOnImage : MonoBehaviour
         for (int i = 1; i < images.Count; i++)
         {
             images[i-1].sprite = images[i].sprite;
+            images[i-1].GetComponent<WhichObjectContainsThisImage>().obj = images[i].GetComponent<WhichObjectContainsThisImage>().obj;
         }
-        images[images.Count-1].sprite = tilesPool[Random.Range(0,tilesPool.Count)].icon;
+        Tiles tile = tilesPool[Random.Range(0,tilesPool.Count)];
+        images[images.Count-1].sprite = tile.icon;
+        images[images.Count-1].GetComponent<WhichObjectContainsThisImage>().obj = tile.obj;
     }
 }
 

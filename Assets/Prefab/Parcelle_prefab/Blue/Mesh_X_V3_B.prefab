@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6640388442324619011}
   - component: {fileID: 2208973786187462888}
   - component: {fileID: 3592945327953378120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_X_V3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,9 +105,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5202703370898725648}
-  m_Layer: 0
+  - component: {fileID: -3932375114183060830}
+  - component: {fileID: 6231320429063233031}
+  m_Layer: 6
   m_Name: Mesh_X_V3_B
-  m_TagString: Untagged
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +130,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-3932375114183060830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4861749640360690090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b00008692109454f8be4a0b6e5ddc71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexI: 0
+  indexJ: 0
+  gridManager: {fileID: 0}
+  neighbours: []
+--- !u!65 &6231320429063233031
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4861749640360690090}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5684714322134794459
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +170,7 @@ GameObject:
   - component: {fileID: 2050821868201797858}
   - component: {fileID: 3334030730072325610}
   - component: {fileID: 3455562602472909944}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_X_V3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

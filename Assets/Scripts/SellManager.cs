@@ -49,15 +49,21 @@ public class SellManager : MonoBehaviour
             ClearVariables();
             
             housesList.Add(_currentCheckedHouse.gameObject);
-            
-            foreach (var node in _currentCheckedHouse.neighbours)
-            {
-                housesList.Add(node.obj);
-            }
+            GameObject.FindObjectOfType<GridManager>().grid[_currentCheckedHouse.indexI,_currentCheckedHouse.indexJ].isVisited = true;
+            AddNeighboursToList(_currentCheckedHouse);
             
             if (housesList.Count >= numberMinNeighborForSell)
             {
                 isNeighborhoodCanBeSell = true;
+            }
+        }
+    }
+    private void AddNeighboursToList(BlockToPlace startPoint){
+        foreach(Node node in startPoint.neighbours){
+            if(!node.isVisited){
+                node.isVisited = true;
+                housesList.Add(node.obj);
+                AddNeighboursToList(node.obj.GetComponent<BlockToPlace>());
             }
         }
     }
@@ -66,6 +72,9 @@ public class SellManager : MonoBehaviour
     {
         housesList.Clear();
         isNeighborhoodCanBeSell = false;
+        foreach(Node node in GameObject.FindObjectOfType<GridManager>().grid){
+            node.isVisited = false;
+        }
     }
 
 
@@ -81,6 +90,7 @@ public class SellManager : MonoBehaviour
                 Destroy(house);
             }
             GameManager.Instance.SetUpPlayerMoney(moneyEarnedFromSelling);
+            ClearVariables();
         }
     }
 }

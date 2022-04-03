@@ -30,7 +30,7 @@ public class HousePlacer : MonoBehaviour
         if (isHouseSelected)
         {
             if(houseToPlace == null){
-                GameObject house = Instantiate(GetComponent<HandleClickOnImage>().obj, transform.position,Quaternion.identity);
+                GameObject house = Instantiate(GetComponent<HandleClickOnImage>().obj, new Vector3(10,10,10) ,Quaternion.identity);
                 houseToPlace = house.GetComponent<BlockToPlace>();
             }
             else{
@@ -47,7 +47,7 @@ public class HousePlacer : MonoBehaviour
 
         if (Physics.Raycast(ray, out _hit, Mathf.Infinity, groundMask))
         {
-            hitPoint = new Vector3(Mathf.Floor(_hit.point.x) + 0.5f, 0.5f, Mathf.Floor(_hit.point.z) + 0.5f);
+            hitPoint = new Vector3(Mathf.Floor(_hit.point.x) + 0.5f, 0, Mathf.Floor(_hit.point.z) + 0.5f);
             houseToPlace.gameObject.transform.position = hitPoint;
             return true;
         }

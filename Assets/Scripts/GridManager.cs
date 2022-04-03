@@ -19,7 +19,7 @@ public class GridManager : MonoBehaviour
         grid = new Node [gridSize,gridSize];
         for(int i = 0 ; i < gridSize; i++){
            for(int j = 0 ; j < gridSize ; j++){
-               grid[i,j] = new Node(new Vector3(i-offset,.5f,j-offset));
+               grid[i,j] = new Node(new Vector3(i-offset,0,j-offset));
            }
         }
     }
