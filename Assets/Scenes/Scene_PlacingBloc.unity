@@ -545,8 +545,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilesPool:
-  - icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-    obj: {fileID: 5578542237916331393, guid: 7a0d0bdc8aecedf4a9b278bd42802449, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 4191780676203012957, guid: 596e16900e5b815479f909241fa5ed29, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 6788666310758121199, guid: b2b0b3648f9408b4eb155b341d9e95b2, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 6519539922766104001, guid: d5a0e4c7b82e69a47805d4ee3376fd9d, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 1060248813013966957, guid: 95e612c6f8535e54c80ad3334354d128, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 7454258230848730756, guid: 0e35a6ca1d5546c469e4a4514d44a6b3, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 4272918281446326764, guid: c9ab9daffa7367942835e04006eb2e90, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 3483582556067470095, guid: 87965847544a11e4da2d313b5b4ce06d, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 3135187783466632589, guid: 1615748cf7407594a94cbd28c525239b, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 3473397859506540570, guid: 66cdbb950e6929e49869d1128c5ff1c4, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 3167244528524496895, guid: b10543b682fe7184281934a2e22ce77f, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 6111596136410191829, guid: 0ab7173ea9c51ce4a825c3bd7648d8d9, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 630287686619069312, guid: 1ad596733204a33468b363215e7b40b1, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 4861749640360690090, guid: 09d1a1ac5175a95419da5593e3f5d218, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 3120581690205573185, guid: bc0d157fa58997143bccdd1834a5522a, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 8334872671454455373, guid: 55afcac91829d1e43920fb671f785410, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 8763689928903924927, guid: bed6df086b3c2e54f9c67bba85633e8b, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 401366788005793959, guid: f31c6a722449abe4497e1d31ab15fbe3, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 3359286371298613048, guid: 68f76d15a28b7534291c43d792efff35, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 5520407782579126443, guid: ae86bc5ab8d47434dbe1705c8652a42d, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 1182446882740368000, guid: 488d7468787dcf44bb4a5840f16211fd, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 7328980505010024434, guid: 1927560247be0834f9c2b085bb2c278a, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 7259832256442136830, guid: 654e165e6ffb54a4a9f5b930cb8a7a9d, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 1502283606557609367, guid: e27144d0345812445855c10dd8b5cad3, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 5562997588241489620, guid: 13baa486255f1af4ea1e616bab48d513, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 1925802133133263222, guid: 750c770f614a8f44485d47e9a35f5b51, type: 3}
+  - icon: {fileID: 0}
+    obj: {fileID: 3936616957119788171, guid: ffdf781a6a3c0b7458d6303de310e205, type: 3}
   obj: {fileID: 0}
   images:
   - {fileID: 673648945}
@@ -875,6 +925,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 894921657729506403, guid: 73c7a5af399cad0408839c2c29b3c58c, type: 3}
+      propertyPath: moneyEarnedFromSelling
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3410238751990279034, guid: 73c7a5af399cad0408839c2c29b3c58c, type: 3}
       propertyPath: m_RootOrder
       value: 7
