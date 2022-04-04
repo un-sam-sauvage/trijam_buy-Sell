@@ -166,14 +166,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 940167463}
-    - target: {fileID: 4987743611645565936, guid: 731da412a13735149bbd33d3479c8f72, type: 3}
-      propertyPath: m_Name
-      value: Money_Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366409007476473840, guid: 731da412a13735149bbd33d3479c8f72, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6628884405460841434, guid: 731da412a13735149bbd33d3479c8f72, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -621,6 +613,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  houseSpawnParticle: {fileID: 3426079637976671748, guid: 61da0f8e775a83946bc2382800f32b0e, type: 3}
+  costForSpawnHouses: 10
 --- !u!114 &940167463 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 894921657729506403, guid: 73c7a5af399cad0408839c2c29b3c58c, type: 3}
@@ -632,6 +626,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ceff8b0748dc14dba62a5f95fdfa20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1560575766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1813777921822089684, guid: 731da412a13735149bbd33d3479c8f72, type: 3}
+  m_PrefabInstance: {fileID: 673648942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641475157
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +997,22 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1814134172}
+    - target: {fileID: 4409205020048262456, guid: a6c7b12526dcff645b85b25fdfa15f17, type: 3}
+      propertyPath: housePlacer
+      value: 
+      objectReference: {fileID: 889418104}
+    - target: {fileID: 4409205020048262456, guid: a6c7b12526dcff645b85b25fdfa15f17, type: 3}
+      propertyPath: panelEndGame
+      value: 
+      objectReference: {fileID: 1560575766}
+    - target: {fileID: 4409205020048262456, guid: a6c7b12526dcff645b85b25fdfa15f17, type: 3}
+      propertyPath: panelGameOver
+      value: 
+      objectReference: {fileID: 1560575766}
+    - target: {fileID: 4409205020048262456, guid: a6c7b12526dcff645b85b25fdfa15f17, type: 3}
+      propertyPath: basePlayerMoney
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8181689197510198304, guid: a6c7b12526dcff645b85b25fdfa15f17, type: 3}
       propertyPath: m_Name
       value: GameManager

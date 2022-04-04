@@ -15,10 +15,12 @@ public class SellManager : MonoBehaviour
 
     private BlockToPlace _currentCheckedHouse;
     public List<GameObject> housesList = new List<GameObject>();
+    private GridManager _gridManager;
     void Awake()
     {
         _sellManager = this;
         _camera = Camera.main;
+        _gridManager = FindObjectOfType<GridManager>();
     }
 
     // Update is called once per frame
@@ -49,7 +51,7 @@ public class SellManager : MonoBehaviour
             ClearVariables();
             
             housesList.Add(_currentCheckedHouse.gameObject);
-            GameObject.FindObjectOfType<GridManager>().grid[_currentCheckedHouse.indexI,_currentCheckedHouse.indexJ].isVisited = true;
+            _gridManager.grid[_currentCheckedHouse.indexI,_currentCheckedHouse.indexJ].isVisited = true;
             AddNeighboursToList(_currentCheckedHouse);
             
             if (housesList.Count >= numberMinNeighborForSell)
@@ -72,7 +74,7 @@ public class SellManager : MonoBehaviour
     {
         housesList.Clear();
         isNeighborhoodCanBeSell = false;
-        foreach(Node node in GameObject.FindObjectOfType<GridManager>().grid){
+        foreach(Node node in _gridManager.grid){
             node.isVisited = false;
         }
     }

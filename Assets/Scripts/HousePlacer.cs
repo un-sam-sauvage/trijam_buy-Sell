@@ -18,6 +18,11 @@ public class HousePlacer : MonoBehaviour
     private Vector3 hitPoint;
 
     [SerializeField] private LayerMask groundMask;
+
+    [SerializeField] private GameObject houseSpawnParticle;
+
+    [SerializeField] private int costForSpawnHouses = 10;
+    public event Action onPlayerLoose;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +74,10 @@ public class HousePlacer : MonoBehaviour
                         houseToPlace.transform.position = gridManagerGrid[i, j].pos;
                         houseToPlace.IsPlaced(i,j);
                         houseToPlace.gameObject.GetComponent<BoxCollider>().enabled = true;
+                        GameObject spawnParticle = Instantiate(houseSpawnParticle, houseToPlace.transform.position,
+                            houseSpawnParticle.transform.rotation);
+                        Destroy(spawnParticle, 2f);
+                        CalculatedCost();
                         isHouseSelected = false;
                         houseToPlace = null;
                     }
@@ -76,5 +85,18 @@ public class HousePlacer : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void PlayerLoose()
+    {
+        onPlayerLoose?.Invoke();
+    }
+    private void CalculatedCost()
+    {
+       GameManager.Instance.SetUpPlayerMoney(-costForSpawnHouses);
+       if (GameManager.Instance.basePlayerMoney <= 0)
+       {
+           PlayerLoose();
+       }
     }
 }
