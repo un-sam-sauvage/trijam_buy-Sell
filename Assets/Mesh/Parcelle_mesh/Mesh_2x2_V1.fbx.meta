@@ -8,52 +8,52 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_armature
-    second: {fileID: 2100000, guid: aa576ac4573b99247a23dd395f20103f, type: 2}
+    second: {fileID: 2100000, guid: d9ef8c04ddc5c1542b36c38be3350c87, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_black_paint
-    second: {fileID: 2100000, guid: 776fb133909fb8744a566c724eae6c22, type: 2}
+    second: {fileID: 2100000, guid: 7bab22c8cc1007d4fbf50e6e50eeb0ee, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_concrete
-    second: {fileID: 2100000, guid: 3af31102bf41bd44ba25d01e781f5cba, type: 2}
+    second: {fileID: 2100000, guid: 6141705c62f7bb64b8258fc3403971e4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_park
-    second: {fileID: 2100000, guid: 10a7ea4034166944f803a16ac527e38a, type: 2}
+    second: {fileID: 2100000, guid: 88d7cbe0ca8bc1e4cbd0c28b1f2a5536, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_roof
-    second: {fileID: 2100000, guid: 2ac47094904bf1247bb44d800a55e401, type: 2}
+    second: {fileID: 2100000, guid: 5727951416912d049ad2bdc1c44629d6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_wall
-    second: {fileID: 2100000, guid: fb9577a3c209dcf42ba36881246708a1, type: 2}
+    second: {fileID: 2100000, guid: 5075e2f9d4313514ea0a8bd15de71a65, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_wall_v2
-    second: {fileID: 2100000, guid: 4a0848a6c2e30cd478ce6ac1e5802b05, type: 2}
+    second: {fileID: 2100000, guid: 28c0425295d99854d98977b26421e3e9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_wall_v3
-    second: {fileID: 2100000, guid: fdd5627f98844fc49ab2221b994b3435, type: 2}
+    second: {fileID: 2100000, guid: 7e076ec741f494948ab98ca84bd5a348, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_wall_v6
-    second: {fileID: 2100000, guid: ff582d0e015de0d44828abbb09efd6b3, type: 2}
+    second: {fileID: 2100000, guid: e53605b8e0c74b7489018cfd7ba0fc1f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_wood
-    second: {fileID: 2100000, guid: 75afdefd05b062f439d3c5ae6460cdf9, type: 2}
+    second: {fileID: 2100000, guid: 01bc0921ca580af428c2da4423086408, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
