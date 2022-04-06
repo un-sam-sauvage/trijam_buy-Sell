@@ -2,8 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class HousePlacer : MonoBehaviour
 {
@@ -22,6 +21,10 @@ public class HousePlacer : MonoBehaviour
     [SerializeField] private GameObject houseSpawnParticle;
 
     [SerializeField] private int costForSpawnHouses = 10;
+
+    public Material [] materialsRoof;
+    public Material [] materialsWall;
+    public Material [] materialsGround;
     public event Action onPlayerLoose;
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,19 @@ public class HousePlacer : MonoBehaviour
         {
             if(houseToPlace == null){
                 GameObject house = Instantiate(GetComponent<HandleClickOnImage>().obj, new Vector3(10,10,10) ,Quaternion.identity);
+                Material [] materials = house.GetComponentInChildren<Renderer>().materials;
+                int index = UnityEngine.Random.Range(0,materialsRoof.Length);
+                for(int i = 0; i< materials.Length;i++){
+                    if(materials[i].name.Contains("M_roof")){
+                        materials[i].color = materialsRoof[index].color;
+                        }
+                    else if(materials[i].name.Contains("M_wall")){
+                        materials[i].color = materialsWall[UnityEngine.Random.Range(0,materialsWall.Length)].color;
+                    }
+                    if(i > 0 && i < house.GetComponentsInChildren<Renderer>().Length){
+                        house.GetComponentsInChildren<Renderer>()[i].material.color = materialsGround[index].color;
+                    }
+                }
                 houseToPlace = house.GetComponent<BlockToPlace>();
             }
             else{
@@ -73,7 +89,7 @@ public class HousePlacer : MonoBehaviour
                         gridManagerGrid[i, j].obj = houseToPlace.gameObject;
                         houseToPlace.transform.position = gridManagerGrid[i, j].pos;
                         houseToPlace.IsPlaced(i,j);
-                        houseToPlace.gameObject.GetComponent<BoxCollider>().enabled = true;
+                        houseToPlace.gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
                         GameObject spawnParticle = Instantiate(houseSpawnParticle, houseToPlace.transform.position,
                             houseSpawnParticle.transform.rotation);
                         Destroy(spawnParticle, 2f);

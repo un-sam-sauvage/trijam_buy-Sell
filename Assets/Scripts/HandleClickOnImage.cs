@@ -9,12 +9,15 @@ public class HandleClickOnImage : MonoBehaviour
     public GameObject obj;
     public List<Image> images;
 
+
     public void Start(){
         foreach (Image image in images)
         {
             Tiles tile = tilesPool[Random.Range(0,tilesPool.Count)];
             image.sprite = tile.icon;
+
             image.gameObject.GetComponent<WhichObjectContainsThisImage>().obj = tile.obj;
+               
         }
     }
     public void OnClick(WhichObjectContainsThisImage objClicked){
@@ -27,6 +30,7 @@ public class HandleClickOnImage : MonoBehaviour
         }
         Tiles tile = tilesPool[Random.Range(0,tilesPool.Count)];
         images[images.Count-1].sprite = tile.icon;
+
         images[images.Count-1].GetComponent<WhichObjectContainsThisImage>().obj = tile.obj;
     }
 }
