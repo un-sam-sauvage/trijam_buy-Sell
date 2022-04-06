@@ -81,7 +81,6 @@ public class HousePlacer : MonoBehaviour
                         isHouseSelected = false;
                         houseToPlace = null;
                     }
-                    
                 }
             }
         }

@@ -6,7 +6,7 @@ public class BlockToPlace : MonoBehaviour
 {
     [HideInInspector] public int indexI,indexJ;
     [HideInInspector] public GridManager gridManager;
-    [HideInInspector] public List<Node> neighbours;
+    public List<Node> neighbours;
 
     void Start(){
         gridManager = GameObject.FindObjectOfType<GridManager>();
