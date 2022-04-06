@@ -925,8 +925,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 894921657729506403, guid: 73c7a5af399cad0408839c2c29b3c58c, type: 3}
+      propertyPath: houseMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 894921657729506403, guid: 73c7a5af399cad0408839c2c29b3c58c, type: 3}
       propertyPath: moneyEarnedFromSelling
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 894921657729506403, guid: 73c7a5af399cad0408839c2c29b3c58c, type: 3}
+      propertyPath: isNeighborhoodCanBeSell
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3410238751990279034, guid: 73c7a5af399cad0408839c2c29b3c58c, type: 3}
       propertyPath: m_RootOrder
@@ -1011,7 +1019,7 @@ PrefabInstance:
       objectReference: {fileID: 1560575766}
     - target: {fileID: 4409205020048262456, guid: a6c7b12526dcff645b85b25fdfa15f17, type: 3}
       propertyPath: basePlayerMoney
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8181689197510198304, guid: a6c7b12526dcff645b85b25fdfa15f17, type: 3}
       propertyPath: m_Name
