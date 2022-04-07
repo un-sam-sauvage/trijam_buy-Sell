@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4478769347398070378}
   - component: {fileID: 8893036334157617134}
   - component: {fileID: 3672775255483689175}
+  - component: {fileID: 7926673348603320266}
   m_Layer: 0
   m_Name: Mesh_2x2_V2.002
   m_TagString: Untagged
@@ -95,6 +96,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: -0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &7926673348603320266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41332710729838803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 6041448600755692158}
+  - {fileID: 41332710729838803}
+  - {fileID: 3579231124032455858}
+  - {fileID: 1686646990321721916}
 --- !u!1 &1686646990321721916
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +126,7 @@ GameObject:
   - component: {fileID: 5026596583623196504}
   - component: {fileID: 7284742943507516887}
   - component: {fileID: 1102515678979213445}
+  - component: {fileID: 5850435202848823034}
   m_Layer: 0
   m_Name: Mesh_2x2_V2.004
   m_TagString: Untagged
@@ -190,6 +210,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: 0.5, y: 0.09999999, z: 0.5}
+--- !u!114 &5850435202848823034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686646990321721916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 6041448600755692158}
+  - {fileID: 41332710729838803}
+  - {fileID: 3579231124032455858}
+  - {fileID: 1686646990321721916}
 --- !u!1 &3424999823624502884
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +280,7 @@ MonoBehaviour:
   indexJ: 0
   gridManager: {fileID: 0}
   neighbours: []
+  teamColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3579231124032455858
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +293,7 @@ GameObject:
   - component: {fileID: 2015259448145173706}
   - component: {fileID: 3385164181573208229}
   - component: {fileID: 5330252826780751649}
+  - component: {fileID: 5355436705607126042}
   m_Layer: 0
   m_Name: Mesh_2x2_V2.003
   m_TagString: Untagged
@@ -337,6 +377,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: 0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &5355436705607126042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3579231124032455858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 6041448600755692158}
+  - {fileID: 41332710729838803}
+  - {fileID: 3579231124032455858}
+  - {fileID: 1686646990321721916}
 --- !u!1 &6041448600755692158
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +407,7 @@ GameObject:
   - component: {fileID: 3255733992819735774}
   - component: {fileID: 1385129796214376041}
   - component: {fileID: 8836391387184168239}
+  - component: {fileID: 1162526578517660588}
   m_Layer: 0
   m_Name: Mesh_2x2_V2.001
   m_TagString: Untagged
@@ -432,6 +491,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: -0.5, y: 0.09999999, z: 0.5}
+--- !u!114 &1162526578517660588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6041448600755692158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 6041448600755692158}
+  - {fileID: 41332710729838803}
+  - {fileID: 3579231124032455858}
+  - {fileID: 1686646990321721916}
 --- !u!1 &8867525381145204967
 GameObject:
   m_ObjectHideFlags: 0

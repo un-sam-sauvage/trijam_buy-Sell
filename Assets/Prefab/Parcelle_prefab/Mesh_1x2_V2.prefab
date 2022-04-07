@@ -50,6 +50,7 @@ MonoBehaviour:
   indexJ: 0
   gridManager: {fileID: 0}
   neighbours: []
+  teamColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &4955470294896080529
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,6 +63,7 @@ GameObject:
   - component: {fileID: 2207807681922544693}
   - component: {fileID: 1164007333929174096}
   - component: {fileID: 2295523223697689190}
+  - component: {fileID: 2213692730888617875}
   m_Layer: 0
   m_Name: Mesh_1x2_V2.001
   m_TagString: Untagged
@@ -145,6 +147,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: -0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &2213692730888617875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4955470294896080529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 4955470294896080529}
+  - {fileID: 6465455355293191820}
 --- !u!1 &6465455355293191820
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +175,7 @@ GameObject:
   - component: {fileID: 8524969657446794802}
   - component: {fileID: 8263208320288561701}
   - component: {fileID: 307389833100707850}
+  - component: {fileID: 8796969201116390178}
   m_Layer: 0
   m_Name: Mesh_1x2_V2.002
   m_TagString: Untagged
@@ -240,6 +259,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: 0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &8796969201116390178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6465455355293191820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 4955470294896080529}
+  - {fileID: 6465455355293191820}
 --- !u!1 &9049652234251649869
 GameObject:
   m_ObjectHideFlags: 0

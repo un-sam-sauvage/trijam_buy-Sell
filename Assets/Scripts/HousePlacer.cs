@@ -38,12 +38,14 @@ public class HousePlacer : MonoBehaviour
         if (isHouseSelected)
         {
             if(houseToPlace == null){
+                Color teamColor = new Color();
                 GameObject house = Instantiate(GetComponent<HandleClickOnImage>().obj, new Vector3(10,10,10) ,Quaternion.identity);
                 Material [] materials = house.GetComponentInChildren<Renderer>().materials;
                 int index = UnityEngine.Random.Range(0,materialsRoof.Length);
                 for(int i = 0; i< materials.Length;i++){
                     if(materials[i].name.Contains("M_roof")){
                         materials[i].color = materialsRoof[index].color;
+                        teamColor = materials[i].color;
                         }
                     else if(materials[i].name.Contains("M_wall")){
                         materials[i].color = materialsWall[UnityEngine.Random.Range(0,materialsWall.Length)].color;
@@ -53,6 +55,7 @@ public class HousePlacer : MonoBehaviour
                     }
                 }
                 houseToPlace = house.GetComponent<BlockToPlace>();
+                houseToPlace.teamColor = teamColor;
             }
             else{
                 CheckHousePlacing();

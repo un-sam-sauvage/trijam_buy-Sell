@@ -1008,7 +1008,7 @@ PrefabInstance:
       objectReference: {fileID: 1560575766}
     - target: {fileID: 4409205020048262456, guid: a6c7b12526dcff645b85b25fdfa15f17, type: 3}
       propertyPath: basePlayerMoney
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8181689197510198304, guid: a6c7b12526dcff645b85b25fdfa15f17, type: 3}
       propertyPath: m_Name

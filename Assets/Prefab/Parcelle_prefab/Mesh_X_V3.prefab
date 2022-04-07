@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9129938051748284630}
   - component: {fileID: 4338287668850032445}
   - component: {fileID: 8637385889460512437}
+  - component: {fileID: 7524728685167218368}
   m_Layer: 0
   m_Name: Mesh_X_V3.001
   m_TagString: Untagged
@@ -95,6 +96,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: -0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &7524728685167218368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3493872998625351539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 3493872998625351539}
+  - {fileID: 8562216334165899913}
 --- !u!1 &7055750662466569855
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +162,7 @@ MonoBehaviour:
   indexJ: 0
   gridManager: {fileID: 0}
   neighbours: []
+  teamColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7815788094240753422
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +262,7 @@ GameObject:
   - component: {fileID: 7044617893613085356}
   - component: {fileID: 8676075516264542546}
   - component: {fileID: 2260665062330178942}
+  - component: {fileID: 6684156274442193149}
   m_Layer: 0
   m_Name: Mesh_X_V3.002
   m_TagString: Untagged
@@ -327,3 +346,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: 0.5, y: 0.09999999, z: 0.5}
+--- !u!114 &6684156274442193149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8562216334165899913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 3493872998625351539}
+  - {fileID: 8562216334165899913}

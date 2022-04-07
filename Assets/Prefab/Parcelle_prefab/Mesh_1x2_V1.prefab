@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5212381769463364590}
   - component: {fileID: 4508306406899999632}
   - component: {fileID: 5080338990234206085}
+  - component: {fileID: 1521457973221623452}
   m_Layer: 0
   m_Name: Mesh_1x2_V1.002
   m_TagString: Untagged
@@ -95,6 +96,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: 0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &1521457973221623452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64637215995706716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 2473260710656086048}
+  - {fileID: 64637215995706716}
 --- !u!1 &2473260710656086048
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +124,7 @@ GameObject:
   - component: {fileID: 7658559984705180256}
   - component: {fileID: 341357968677909271}
   - component: {fileID: 5333006681735391087}
+  - component: {fileID: 7261027472825491073}
   m_Layer: 0
   m_Name: Mesh_1x2_V1.001
   m_TagString: Untagged
@@ -190,6 +208,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: -0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &7261027472825491073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2473260710656086048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 2473260710656086048}
+  - {fileID: 64637215995706716}
 --- !u!1 &3256381475286119891
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +274,7 @@ MonoBehaviour:
   indexJ: 0
   gridManager: {fileID: 0}
   neighbours: []
+  teamColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8360309529908100923
 GameObject:
   m_ObjectHideFlags: 0

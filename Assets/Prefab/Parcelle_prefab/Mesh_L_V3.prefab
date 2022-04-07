@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1466294229706779087}
   - component: {fileID: 5448426272596676145}
   - component: {fileID: 3505467795426972089}
+  - component: {fileID: 1930591268645058119}
   m_Layer: 0
   m_Name: Mesh_L_V3.001
   m_TagString: Untagged
@@ -95,6 +96,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: 0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &1930591268645058119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16639159988923768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 16639159988923768}
+  - {fileID: 749132788170226486}
+  - {fileID: 3044594345156124683}
 --- !u!1 &749132788170226486
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +125,7 @@ GameObject:
   - component: {fileID: 5237023320596167754}
   - component: {fileID: 899701117847818283}
   - component: {fileID: 5520570565038855705}
+  - component: {fileID: 4467221935955353861}
   m_Layer: 0
   m_Name: Mesh_L_V3.002
   m_TagString: Untagged
@@ -190,6 +209,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: -0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &4467221935955353861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749132788170226486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 16639159988923768}
+  - {fileID: 749132788170226486}
+  - {fileID: 3044594345156124683}
 --- !u!1 &3044594345156124683
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +238,7 @@ GameObject:
   - component: {fileID: 3593374001216502491}
   - component: {fileID: 7896521413452337218}
   - component: {fileID: 7009706984468433941}
+  - component: {fileID: 9061567092665588659}
   m_Layer: 0
   m_Name: Mesh_L_V3.003
   m_TagString: Untagged
@@ -285,6 +322,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: 0.5, y: 0.09999999, z: 0.5}
+--- !u!114 &9061567092665588659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3044594345156124683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 16639159988923768}
+  - {fileID: 749132788170226486}
+  - {fileID: 3044594345156124683}
 --- !u!1 &4429826117761358357
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,3 +479,4 @@ MonoBehaviour:
   indexJ: 0
   gridManager: {fileID: 0}
   neighbours: []
+  teamColor: {r: 0, g: 0, b: 0, a: 0}

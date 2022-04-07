@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 7150638213126238371}
   - component: {fileID: 7655963428951875937}
   - component: {fileID: 7103210169463203341}
+  - component: {fileID: 8651206464124934696}
   m_Layer: 0
   m_Name: Mesh_1x2_V3.002
   m_TagString: Untagged
@@ -184,6 +185,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: 0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &8651206464124934696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708474822099766671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 1994027666684118635}
+  - {fileID: 1708474822099766671}
 --- !u!1 &1994027666684118635
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +213,7 @@ GameObject:
   - component: {fileID: 291304645576785253}
   - component: {fileID: 792056457850001000}
   - component: {fileID: 1649861623913492607}
+  - component: {fileID: 5986808280989355259}
   m_Layer: 0
   m_Name: Mesh_1x2_V3.001
   m_TagString: Untagged
@@ -279,6 +297,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19999997, z: 1}
   m_Center: {x: -0.5, y: 0.09999999, z: -0.5}
+--- !u!114 &5986808280989355259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994027666684118635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc4205d0390ccb48947b956aa0c23c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentNeighbours: []
+  blocGroup:
+  - {fileID: 1994027666684118635}
+  - {fileID: 1708474822099766671}
 --- !u!1 &5071002343899358884
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,3 +363,4 @@ MonoBehaviour:
   indexJ: 0
   gridManager: {fileID: 0}
   neighbours: []
+  teamColor: {r: 0, g: 0, b: 0, a: 0}
