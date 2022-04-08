@@ -50,7 +50,7 @@ public class SellManager : MonoBehaviour
             _currentCheckedHouse = hit.collider.gameObject.GetComponent<BlockToPlace>();
             ClearVariables();
             
-            housesList.Add(_currentCheckedHouse.gameObject);
+            housesList.Add(_currentCheckedHouse.gameObject.GetComponentInParent<BlockToPlace>().gameObject);
             _gridManager.grid[_currentCheckedHouse.indexI,_currentCheckedHouse.indexJ].isVisited = true;
             AddNeighboursToList(_currentCheckedHouse);
             
@@ -64,8 +64,8 @@ public class SellManager : MonoBehaviour
         foreach(Node node in startPoint.neighbours){
             if(!node.isVisited){
                 node.isVisited = true;
-                housesList.Add(node.obj);
-                AddNeighboursToList(node.obj.GetComponent<BlockToPlace>());
+                housesList.Add(node.obj.GetComponentInParent<BlockToPlace>().gameObject);
+                AddNeighboursToList(node.obj.GetComponentInParent<BlockToPlace>());
             }
         }
     }

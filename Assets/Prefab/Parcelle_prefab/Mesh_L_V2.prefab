@@ -113,6 +113,8 @@ MonoBehaviour:
   - {fileID: 2422348320925246387}
   - {fileID: 7464782716912875792}
   - {fileID: 7153393122278048548}
+  indexI: 0
+  indexJ: 0
 --- !u!1 &4069435951230434341
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +125,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3689110839676855967}
   - component: {fileID: -2127164148199940418}
-  m_Layer: 0
+  - component: {fileID: 2660172427499294878}
+  m_Layer: 6
   m_Name: Mesh_L_V2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,6 +168,19 @@ MonoBehaviour:
   gridManager: {fileID: 0}
   neighbours: []
   teamColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!65 &2660172427499294878
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4069435951230434341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7153393122278048548
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +294,8 @@ MonoBehaviour:
   - {fileID: 2422348320925246387}
   - {fileID: 7464782716912875792}
   - {fileID: 7153393122278048548}
+  indexI: 0
+  indexJ: 0
 --- !u!1 &7425820325190991044
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,3 +499,5 @@ MonoBehaviour:
   - {fileID: 2422348320925246387}
   - {fileID: 7464782716912875792}
   - {fileID: 7153393122278048548}
+  indexI: 0
+  indexJ: 0

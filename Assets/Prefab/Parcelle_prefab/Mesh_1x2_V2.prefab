@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 397440210969317998}
   - component: {fileID: 413159015979586085}
-  m_Layer: 0
+  - component: {fileID: -5169229226736928378}
+  m_Layer: 6
   m_Name: Mesh_1x2_V2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +52,19 @@ MonoBehaviour:
   gridManager: {fileID: 0}
   neighbours: []
   teamColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!65 &-5169229226736928378
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065151239676233940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4955470294896080529
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +177,8 @@ MonoBehaviour:
   blocGroup:
   - {fileID: 4955470294896080529}
   - {fileID: 6465455355293191820}
+  indexI: 0
+  indexJ: 0
 --- !u!1 &6465455355293191820
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +291,8 @@ MonoBehaviour:
   blocGroup:
   - {fileID: 4955470294896080529}
   - {fileID: 6465455355293191820}
+  indexI: 0
+  indexJ: 0
 --- !u!1 &9049652234251649869
 GameObject:
   m_ObjectHideFlags: 0
