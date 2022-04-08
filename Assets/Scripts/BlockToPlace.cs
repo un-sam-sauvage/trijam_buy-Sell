@@ -20,6 +20,7 @@ public class BlockToPlace : MonoBehaviour
                 for (int y = 0; y < gridManager.gridSize; y++)
                 {
                     if(gridManager.grid[x,y].pos == children.gameObject.transform.position){
+                        Debug.Log("j'ajoute une node");
                         gridManager.grid[x,y].obj = children.gameObject;
                     }
                 }
