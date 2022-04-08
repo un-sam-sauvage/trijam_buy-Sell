@@ -5,7 +5,7 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     public int gridSize;
-    public float offset = 4.5f;
+    public float offset = 4f;
     public Node [,] grid ;
 
     // Start is called before the first frame update

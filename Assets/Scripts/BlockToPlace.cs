@@ -15,13 +15,15 @@ public class BlockToPlace : MonoBehaviour
 
     public void IsPlaced(int i,int j){
         foreach (BlockChildren children in GetComponentsInChildren<BlockChildren>()){
+            children.transform.position = new Vector3 (children.transform.position.x, children.transform.position.y -.1f,children.transform.position.z);
             for (int x = 0; x < gridManager.gridSize; x++)
             {   
                 for (int y = 0; y < gridManager.gridSize; y++)
                 {
-                    if(gridManager.grid[x,y].pos == children.gameObject.transform.position){
-                        Debug.Log("j'ajoute une node");
+                    if(gridManager.grid[x,y].pos == children.GetComponent<MeshRenderer>().bounds.center){
                         gridManager.grid[x,y].obj = children.gameObject;
+                        children.indexI = x;
+                        children.indexJ = y;
                     }
                 }
             }
@@ -36,18 +38,12 @@ public class BlockToPlace : MonoBehaviour
     void CheckNeighbours(Vector2Int [] posToCheck){
         foreach (BlockChildren children in GetComponentsInChildren<BlockChildren>())
         {
-            neighbours.AddRange(children.AddNeighbours(neighbours,gridManager,indexI,indexJ));
+            neighbours.AddRange(children.AddNeighbours(neighbours,gridManager));
         }
         neighbours = ClearNeighbours();
-        // foreach(Vector2Int pos in posToCheck){
-        //     if(pos.x < gridManager.gridSize && pos.y < gridManager.gridSize && pos.x >= 0 && pos.y >= 0){
-        //         Node node = gridManager.grid[pos.x,pos.y];
-        //         if(node.obj != null && IsInSameTeam(node.obj) && node.pos != gameObject.transform.position){
-        //             neighbours.Add(node);
-        //             node.obj.GetComponent<BlockToPlace>().neighbours.Add(gridManager.grid[indexI,indexJ]);
-        //         }
-        //     }
-        // }
+        foreach(Node neighbour in neighbours){
+            neighbour.obj.GetComponentInParent<BlockToPlace>().neighbours.Add(gridManager.grid[indexI,indexJ]);
+        }
     }
     List<Node> ClearNeighbours(){
         List<Node> neighboursCleared = new List<Node>();

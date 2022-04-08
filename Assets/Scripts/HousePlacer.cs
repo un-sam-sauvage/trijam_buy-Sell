@@ -71,7 +71,7 @@ public class HousePlacer : MonoBehaviour
 
         if (Physics.Raycast(ray, out _hit, Mathf.Infinity, groundMask))
         {
-            hitPoint = new Vector3(Mathf.Floor(_hit.point.x) + 0.5f, 0, Mathf.Floor(_hit.point.z) + 0.5f);
+            hitPoint = new Vector3(Mathf.Floor(_hit.point.x) + 1, 0, Mathf.Floor(_hit.point.z) + 1f);
             houseToPlace.gameObject.transform.position = hitPoint;
             return true;
         }
@@ -83,14 +83,14 @@ public class HousePlacer : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && CheckHousePlacing())
         {
+            Vector3 houseToPlacePos = new Vector3 (houseToPlace.transform.position.x -.5f,houseToPlace.transform.position.y,houseToPlace.transform.position.z-.5f);
             var gridManagerGrid = gridManager.grid;
             for (int i = 0; i < gridManager.gridSize; i++)
             {
                 for (int j = 0; j < gridManager.gridSize; j++)
                 {
-                    if( houseToPlace && gridManagerGrid[i,j].pos == houseToPlace.transform.position){
+                    if( houseToPlace && gridManagerGrid[i,j].pos == houseToPlacePos){
                         gridManagerGrid[i, j].obj = houseToPlace.gameObject;
-                        houseToPlace.transform.position = gridManagerGrid[i, j].pos;
                         houseToPlace.IsPlaced(i,j);
                         houseToPlace.gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
                         GameObject spawnParticle = Instantiate(houseSpawnParticle, houseToPlace.transform.position,
