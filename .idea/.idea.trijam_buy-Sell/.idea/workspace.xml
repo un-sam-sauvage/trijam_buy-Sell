@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d41ab7bb-8bdc-4d28-830c-353708be9b59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pause.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pause.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.trijam_buy-Sell/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.trijam_buy-Sell/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/VFX/PS_pop_particule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/VFX/PS_pop_particule.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_PlacingBloc.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_PlacingBloc.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HousePlacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HousePlacer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SellManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SellManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +76,8 @@
       <workItem from="1648988465385" duration="5853000" />
       <workItem from="1649101821423" duration="98000" />
       <workItem from="1649101941878" duration="2614000" />
+      <workItem from="1649598982058" duration="347000" />
+      <workItem from="1649599419916" duration="285000" />
     </task>
     <servers />
   </component>

@@ -43,10 +43,11 @@ public class HousePlacer : MonoBehaviour
                 Material [] materials = house.GetComponentInChildren<Renderer>().materials;
                 int index = UnityEngine.Random.Range(0,materialsRoof.Length);
                 for(int i = 0; i< materials.Length;i++){
-                    if(materials[i].name.Contains("M_roof")){
+                    if(materials[i].name.Contains("M_roof"))
+                    {
                         materials[i].color = materialsRoof[index].color;
                         teamColor = materials[i].color;
-                        }
+                    }
                     else if(materials[i].name.Contains("M_wall")){
                         materials[i].color = materialsWall[UnityEngine.Random.Range(0,materialsWall.Length)].color;
                     }
