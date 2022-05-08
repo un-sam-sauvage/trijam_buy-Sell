@@ -16,6 +16,14 @@ public class BlockToPlace : MonoBehaviour
     public void IsPlaced(int i,int j){
         foreach (BlockChildren children in GetComponentsInChildren<BlockChildren>()){
             children.transform.position = new Vector3 (children.transform.position.x, children.transform.position.y -.1f,children.transform.position.z);
+            foreach(Transform obj in children.GetComponentInParent<BlockToPlace>().GetComponentsInChildren<Transform>()){
+                if(!obj.GetComponent<BlockChildren>() && obj.transform.position.y == 0 && !obj.GetComponent<BlockToPlace>()){
+                    Debug.Log("je réduis la position");
+                    obj.transform.position = new Vector3(obj.transform.position.x,obj.transform.position.y - .1f, obj.transform.position.z);
+                }else{
+                    Debug.Log("je n'ai pas trouvé d'objet " + obj.transform.position);
+                }
+            }
             for (int x = 0; x < gridManager.gridSize; x++)
             {   
                 for (int y = 0; y < gridManager.gridSize; y++)
