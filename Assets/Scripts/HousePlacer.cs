@@ -111,11 +111,8 @@ public class HousePlacer : MonoBehaviour
                 Vector3 childrenPos = new Vector3(children.GetComponent<MeshRenderer>().bounds.center.x, children.GetComponent<MeshRenderer>().bounds.center.y -.1f, children.GetComponent<MeshRenderer>().bounds.center.z);
                 for(int i =0 ; i<gridManager.gridSize ; i++){
                     for(int j = 0 ; j<gridManager.gridSize ; j++ ){
-                        if(gridManager.grid[i,j].obj && gridManager.grid[i,j].pos == childrenPos){
+                        if(gridManager.grid[i,j].obj && gridManager.grid[i,j].pos == childrenPos || childrenPos.x > 5 || childrenPos.z > 5){
                             return true;
-                        }
-                        else{
-                            Debug.Log(gridManager.grid[i,j].obj + " " + gridManager.grid[i,j].pos + " " + childrenPos);
                         }
                     }
                 }
