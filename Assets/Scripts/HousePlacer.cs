@@ -82,9 +82,10 @@ public class HousePlacer : MonoBehaviour
 
     private void PlaceHouse()
     {
-        if (Input.GetMouseButtonDown(0) && CheckHousePlacing())
+        if (Input.GetMouseButtonDown(0) && CheckHousePlacing() && !IsOverlappingOtherHouses())
         {
             Vector3 houseToPlacePos = new Vector3 (houseToPlace.transform.position.x -.5f,houseToPlace.transform.position.y,houseToPlace.transform.position.z-.5f);
+
             var gridManagerGrid = gridManager.grid;
             for (int i = 0; i < gridManager.gridSize; i++)
             {
@@ -105,8 +106,20 @@ public class HousePlacer : MonoBehaviour
             }
         }
     }
-
-    private void PlayerLoose()
+    bool IsOverlappingOtherHouses(){
+            foreach(BlockChildren children in houseToPlace.GetComponentsInChildren<BlockChildren>()){
+                Vector3 childrenPos = new Vector3(children.gameObject.transform.position.x -.5f, children.gameObject.transform.position.y, children.gameObject.transform.position.z-.5f);
+                for(int i =0 ; i<gridManager.gridSize ; i++){
+                    for(int j = 0 ; j<gridManager.gridSize ; j++ ){
+                        if(gridManager.grid[i,j].obj && gridManager.grid[i,j].pos == childrenPos){
+                            return true;
+                        }
+                    }
+                }
+            }
+        return false;
+    }   
+     private void PlayerLoose()
     {
         onPlayerLoose?.Invoke();
     }
