@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 5134178620745228109}
   - component: {fileID: -1652215987636818801}
   - component: {fileID: 3533154280401769967}
+  - component: {fileID: -2363384227765463856}
   m_Layer: 6
   m_Name: Mesh_2x2_V1
   m_TagString: Untagged
@@ -388,6 +389,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2363384227765463856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5479637115045987831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9dd8ea22c63ab438300c9684ac428f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 64b9f0ddba7a7d14a874cad49937992e, type: 2}
+  outlineScaleFactor: -1.05
+  outlineColor: {r: 0.8977206, g: 0.9056604, b: 0.2007832, a: 1}
 --- !u!1 &6104462763993850379
 GameObject:
   m_ObjectHideFlags: 0

@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 4409743655386433205}
   - component: {fileID: -1473743314763345318}
   - component: {fileID: 1285067642296290168}
+  - component: {fileID: -767492360807497356}
   m_Layer: 6
   m_Name: Mesh_X_V1
   m_TagString: Untagged
@@ -179,6 +180,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-767492360807497356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925272802967886863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9dd8ea22c63ab438300c9684ac428f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: 64b9f0ddba7a7d14a874cad49937992e, type: 2}
+  outlineScaleFactor: -1.05
+  outlineColor: {r: 0.8977206, g: 0.9056604, b: 0.2007832, a: 1}
 --- !u!1 &4436468987284393369
 GameObject:
   m_ObjectHideFlags: 0
